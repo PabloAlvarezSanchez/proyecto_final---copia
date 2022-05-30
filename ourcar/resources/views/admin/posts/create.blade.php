@@ -37,7 +37,7 @@
          </div>
 
          <div class="form-group">
-            {!! Form::label('combustible', 'Modelo') !!}
+            {!! Form::label('combustible', 'Combustible') !!}
             {!! Form::text('combustible', null,['class' => 'form-control', 'placeholder'=>'Ingrese el combustible']) !!}
          </div>
 

@@ -19,7 +19,7 @@ class UserController extends Controller
      */
     public function index(){
         $user =User::where('id',auth()->user()->id);
-        return view('user.index',compact('user'));
+        return view('users.index',compact('user'));
     }
 
     /**

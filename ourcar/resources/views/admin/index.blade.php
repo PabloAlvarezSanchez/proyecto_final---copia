@@ -34,8 +34,9 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Ver categorias</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="admin/categories" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Ver todas las categorias creadas</p>
+          <p></p>
+          <a href="admin/categories" class="btn btn-primary">Entrar</a>
         </div>
       </div>
     </div>
@@ -43,8 +44,8 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Crear una nueva categoria</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <br>
+          <a href="#" class="btn btn-primary">Entrar</a>
         </div>
       </div>
     </div>
@@ -53,22 +54,13 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Lista de usuarios</h5>
+          <p class="card-text">ver todos los usuarios registrados.</p>
+          <a href="#" class="btn btn-primary">Entrar</a>
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    
 @stop
 
 @section('css')

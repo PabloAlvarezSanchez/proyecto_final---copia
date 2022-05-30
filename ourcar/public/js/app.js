@@ -5075,12 +5075,50 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var message_el = document.getElementById("messages");
+var username_input = document.getElementById("username_input");
+var message_input = document.getElementById("message_inpu");
+var message_form = document.getElementById("message_form");
+message_form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var has_errors = false;
 
-window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+  if (username_input.value == '') {
+    alert('Por favor introduce un nombre de usuario');
+    has_errors = true;
+  }
+
+  if (message_input.value == '') {
+    alert('Por favor introduce un mensaje');
+    has_errors = true;
+  }
+
+  if (has_errors) {
+    return;
+  }
+
+  var options = {
+    method: 'post',
+    url: '/enviar-mensaje',
+    data: {
+      username: username_input.value,
+      message: message_input.value
+    }
+  };
+  axios__WEBPACK_IMPORTED_MODULE_0___default()(options);
+});
+window.SpeechRecognitionAlternative.channel('chat').listen('.message', function (e) {
+  message_el.innerHTML += '<div class="message"><strong>' + e.username + '</strong>' + e.message + '</div>';
+});
+
+
+window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"];
+alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"].start();
 
 /***/ }),
 
@@ -22596,6 +22634,18 @@ process.umask = function() { return 0; };
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

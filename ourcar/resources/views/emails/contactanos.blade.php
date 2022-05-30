@@ -7,10 +7,14 @@
     <title>Envio</title>
 </head>
 <body>
-    <h1>Correo electronico</h1>
+    <img src="https://i.ibb.co/1n5HZbB/favicon-ico.png" alt="" width="100%">
+    <h1>Credenciales</h1>
     <p><strong>Nombre:</strong>{{$contacto['name']}}</p>
     <p><strong>Email:</strong>{{$contacto['email']}}</p>
-    <p><strong>Mensaje</strong>{{$contacto['mensaje']}}</p>
+
+    <h2>Asunto:</h2>
+
+    <p><strong>Mensaje:</strong>{{$contacto['mensaje']}}</p>
 </body>
 @extends('layouts.footer')
 </html>

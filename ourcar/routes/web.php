@@ -20,8 +20,13 @@ Route::post('/enviar-mensaje', function(Request $request){
                 event(
                     new Message(
                         $request->input('username'),
-                        $request->input('message')));
+                        $request->input('message')
+                    )
+                );
+                return["success"=>true];
 });
+
+
 Route::get('/contact', function(){
     return view('contact');
 });
@@ -31,8 +36,10 @@ Route::get('/category', function(){
 });
 
 
+Route::get('/users', [UserController::class, 'index'])->name('users.index');
+Route::get('/posts/edit/{post}',  [PostController::class, 'edit'])->name('posts.edit');
 
-Route::get('/post', [UserController::class, 'posts2'])->name('posts.index2');
+Route::get('/posts/private', [PostController::class, 'index2'])->name('posts.index2');
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
@@ -49,7 +56,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/', function () {
+        return view('welcome');
+    });
 });

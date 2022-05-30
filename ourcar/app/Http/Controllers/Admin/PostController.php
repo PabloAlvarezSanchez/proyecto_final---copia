@@ -18,14 +18,11 @@ class PostController extends Controller
      */
    
         public function index(){
-            $posts =Post::all()->paginate(10);
+            $posts =Post::all();
             return view('admin.posts.index',compact('posts'));
         }
 
-        public function index2(){
-            $posts =Post::where('user_id',auth()->user()->id);
-            return view('admin.posts.index2',compact('posts'));
-        }
+    
 
         
     
@@ -62,7 +59,7 @@ class PostController extends Controller
             ]);
 
         }
-        return redirect()->route('admin.posts.edit',$post);
+        return redirect()->route('posts.index',$post);
     }
 
     /**
@@ -99,22 +96,8 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $post->update($request->all());
-        if($request->file('file')){
-          $url=  Storage::put('posts',$request->file('file'));
-        }
-
-        if ($post->image){
-            Storage::delete($post->image->url);
-
-            $post->image->update([
-                'url' => $url
-            ]);
-        }else{
-            $post->image()->create([
-                'url'=> $url
-            ]);
-        }
-        return redirect()->route('admin.posts.edit',$post)->with('info','Post actualizado');
+        
+        return redirect()->route('posts.index',$post)->with('info','Post actualizado');
     }
 
     /**

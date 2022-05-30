@@ -83,10 +83,10 @@
 
             <div class="card p-3">
               <blockquote class="blockquote mb-0 card-body">
-                <p>Es un sitio muy agragable, tiene una amplua carta y el personal es de un trato exquisito. Vamos a menudo y nunca nos defraudan</p>
+                <p> “¿Por qué tiene que ser tan bonita esta ciudad?”</p>
                 <footer class="blockquote-footer">
                   <small class="text-muted">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
+                    Matt Damon sobre<cite title="Source Title"> Madrid</cite>
                   </small>
                 </footer>
               </blockquote>
@@ -113,12 +113,12 @@
                   <p class="card-text">Barcelona, la capital cosmopolita de la región de Cataluña en España, es conocida por su arte y arquitectura. La fantástica iglesia de la Sagrada Familia y otros hitos modernistas diseñados por Antoni Gaudí adornan la ciudad.</p>  </div>
               </div>
 
-            <div class="card bg-primary text-white text-center p-3">
+            <div class="card p-3 text-right">
               <blockquote class="blockquote mb-0">
-                <p>Un lugar perfecto para una cena tanto en familia como en pareja. Muy buena carta de vinos. Recomiendo ensalada con helado de orégano (o algo así), realmente sorprendente y espectacular. Muy buena atención h el servicio.</p>
+                <p>"visitar Asturias para evadirse de lo feo del mundo"</p>
                 <footer class="blockquote-footer">
                   <small>
-                    Someone famous in <cite title="Source Title">Source Title</cite>
+                    Woody Allen sobre<cite title="Source Title"> Asturias</cite>
                   </small>
                 </footer>
               </blockquote>
@@ -134,9 +134,9 @@
 
             <div class="card p-3 text-right">
               <blockquote class="blockquote mb-0">
-                <p> <footer class="blockquote-footer">
+                <p>“Es apasionante, y la Alhambra es algo inimitable. No me canso de sacar fotos aquí. Nos quedaremos algunos días más para enseñarle a Jennifer todas las cosas que yo ya conozco” <footer class="blockquote-footer">
                   <small class="text-muted">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
+                   Brad Pitt sobre <cite title="Source Title">Granada</cite>
                   </small>
                 </footer>
               </blockquote>
@@ -144,4 +144,8 @@
           </div>
     </body>
     @extends('layouts.footer')
+    
+
+    
+  
 </html>

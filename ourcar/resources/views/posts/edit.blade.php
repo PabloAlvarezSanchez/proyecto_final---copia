@@ -1,12 +1,18 @@
-@extends('adminlte::page')
+<link  rel="icon"   href="https://i.ibb.co/1n5HZbB/favicon-ico.png" type="image/png" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-@section('title', 'Ourcar')
-
-@section('content_header')
-    <h1>Dashboard</h1>
-@stop
-
-@section('content')
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        @extends('layouts.app')
+        <div class="container" style="margin-top:10%">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-5 d-none d-lg-block bg-register-image" style="background-image: url('https://cdn.pixabay.com/photo/2021/06/10/16/15/travel-6326482_960_720.jpg')" ></div>
+                        <div class="col-lg-7">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Editar Post</h1>
+                                </div>
 {!! Form::model($post,['route' => ['admin.posts.update',$post], 'autocomplete' =>'off','files'=>true, 'method'=>'put']) !!}
 
 <div class="form-group">
@@ -35,7 +41,7 @@
 </div>
 
 <div class="form-group">
-{!! Form::label('combustible', 'Combustible') !!}
+{!! Form::label('combustible', 'Modelo') !!}
 {!! Form::text('combustible', null,['class' => 'form-control', 'placeholder'=>'Ingrese el combustible']) !!}
 </div>
 
@@ -76,22 +82,4 @@
     {!! Form::close() !!} 
  </div>
 </div>
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> 
-     document.getElementById("file").addEventListener('change', cambiarImagen);
-           function cambiarImagen(event){
-            var file = event.target.files[0];
-            var reader = new FileReader();
-            reader.onload = (event) => {
-                document.getElementById("picture").setAttribute('src', event.target.result);
-            };
-            reader.readAsDataURL(file);
-           }
-    </script>
-@stop
+</div>

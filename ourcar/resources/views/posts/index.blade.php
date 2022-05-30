@@ -24,7 +24,7 @@
                             <!-- Product price-->
                            <p>Ciudad: {{$post->ciudad}}</p> 
                            <p>Año: {{$post->anio}}</p>
-                           <p>Potencia: {{$post->cv}}</p> 
+                           <p>Potencia: {{$post->cv}} cv</p> 
                            <p>Combustible: {{$post->combustible}}</p>
                         </div>
                     </div>

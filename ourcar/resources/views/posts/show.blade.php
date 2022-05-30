@@ -1,14 +1,15 @@
+@extends('layouts.app')
 <!DOCTYPE html>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        @extends('layouts.app')
-<html lang="en">
+       
+
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Shop Item - Start Bootstrap Template</title>
+        <title>OurCar</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -45,10 +46,12 @@
                         <h1 class="display-5 fw-bolder">{{$post->marca}} {{$post->modelo}}</h1>
                         <div class="fs-5 mb-5">
                             <span><p>{{$post->puertas}}€ por dia</p></span>
-                            <span><p>Tipo de combustible{{$post->combustible}} :</p></span>
+                            <span><p>Tipo de combustible: {{$post->combustible}} </p></span>
+                            <span><p>Ciudad: {{$post->ciudad}} </p></span>
                         </div><span><p>Caballos de potencia: {{$post->cv}}</p></span>
+                    </div><span><p>Kilometros recorridos: {{$post->km}}</p></span>
                         <span><p>Año de fabricacion: {{$post->anio}}</p></span>
-                        <span><p>Año de fabricacion: {{$post->descripcion}}</p></span>
+                        <span><p>{{$post->descripcion}}</p></span>
                        
                        
                         <div class="d-flex">
